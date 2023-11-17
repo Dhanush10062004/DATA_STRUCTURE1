@@ -10,7 +10,7 @@ struct Node {
     struct Node* next;
 };
 
-// Hashing function
+// Hashing function rskjJGkvfh
 int hashFunction(int key, int tableSize) {
     return key % tableSize;
 }
