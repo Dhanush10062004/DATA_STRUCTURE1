@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+const char *morse_code[] = {
+  ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
+  ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",
+  "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."
+};
+
+int main() {
+  char text[100];
+  printf("Enter a message to translate to Morse code: ");
+  scanf("%[^\n]s", text);
+  int len = strlen(text);
+
+  for (int i = 0; i < len; i++) {
+    if (text[i] == ' ')
+      printf("  ");
+    else
+      printf("%s ", morse_code[text[i] - 'a']);
+  }
+  return 0;
+}
